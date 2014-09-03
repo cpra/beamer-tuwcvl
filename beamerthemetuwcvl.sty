@@ -6,7 +6,7 @@
 
 \RequirePackage{tikz}
 
-\definecolor{tuwcvl_inf_red}{rgb}{0.8,0,0.2}
+\definecolor{tuwcvl_inf_red}{rgb}{0.929,0.098,0.141}
 
 \definecolor{tuwcvl_bg_border}{rgb}{0.6,0.6,0.6}
 \definecolor{tuwcvl_bg_bg}{rgb}{0.92,0.92,0.92}
@@ -32,6 +32,16 @@
 \setbeamercolor{date in head/foot}{fg=tuwcvl_textlight}
 \setbeamercolor{headline}{parent={normal text}}
 \setbeamercolor{caption name}{fg=tuwcvl_inf_red}
+
+\setbeamercolor{bibliography entry title}{fg=tuwcvl_text}
+\setbeamercolor{bibliography entry author}{fg=tuwcvl_text}
+\setbeamercolor{bibliography entry location}{fg=tuwcvl_text}
+\setbeamercolor{bibliography entry note}{fg=tuwcvl_text}
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+\setbeamertemplate{itemize/enumerate body begin}{\normalsize}
+\setbeamertemplate{itemize/enumerate subbody begin}{\normalsize}
 
 \setbeamertemplate{caption}[numbered]
 \setbeamerfont{caption}{size=\scriptsize}
@@ -104,5 +114,13 @@
       \end{beamercolorbox}}
   \fi
 }
+
+% biblatex
+
+\renewbibmacro{in:}{}
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{title}{\mkbibemph{#1}} 
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{journaltitle}{#1} 
+\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{booktitle}{#1}
+\setlength\bibitemsep{5pt}
 
 \mode<all>
