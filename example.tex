@@ -1,6 +1,6 @@
 
 % xetex expected
-\documentclass[xetex]{beamer}
+\documentclass[xetex,professionalfont]{beamer}
 
 % we want math
 \usepackage{amsmath}
@@ -76,16 +76,12 @@
 \usepackage[english]{babel}
 
 % better bibliographies
-% \usepackage[backend=biber,style=numeric]{biblatex}
-
-% PDF metadata and hyperlinks
-% use e.g. \texorpdfstring{$A_4$ Symmetry}{A4 Symmetry} if you have math in titles
-% \usepackage[colorlinks=false,pdfborder={0 0 0},linkbordercolor={0 0 0}]{hyperref}
+\usepackage[backend=biber,style=numeric]{biblatex}
 
 % -----------------------------------------------------------------------------
 
 % % specify PDF metadata
-% \hypersetup{pdftitle={CVL Beamer Template},pdfsubject={},pdfauthor={Christopher Pramerdorfer}}
+\hypersetup{pdftitle={CVL Beamer Template},pdfsubject={},pdfauthor={Christopher Pramerdorfer}}
 
 % copyright font style
 \makeatletter\renewcommand{\CRB@setcopyrightfont}{\tiny\color{lightgray}}
