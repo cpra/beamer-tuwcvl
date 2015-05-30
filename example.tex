@@ -49,19 +49,20 @@
 
 % system font support (requires xetex or luatex)
 \usepackage{fontspec}
+\setsansfont{Roboto} % part of ttf-roboto on Arch
 \setmonofont[Scale=0.7]{Cousine} % part of ttf-chromeos fonts on Arch
 
-% subcaptions (and subfigures)
+% subfigures
 % example:
 %   \begin{figure}
 %   \centering
-%   \subcaptionbox{A cat\label{fig:cat}}{\includegraphics{cat}}
-%   \subcaptionbox{A dog\label{fig:dog}}{\includegraphics{dog}}
-%   \caption{Two animals}
+%   \subfloat[Cat\label{fig:cat}]{\includegraphics[width=0.4\textwidth]{cat}}\quad
+%   \subfloat[Dog\label{fig:dog}]{\includegraphics[width=0.4\textwidth]{dog}}
+%   \caption{Animals}
 %   \label{fig:animals}
 %   \end{figure}
-% further alignment and resizing is possible by adding e.g. {fig:cat}[0.4\linewidth]{...}
-\usepackage{subcaption}
+\usepackage[caption=false]{subfig}
+\captionsetup{belowskip=0pt,aboveskip=0pt}
 
 % improve microtypography
 \usepackage{microtype}
@@ -191,6 +192,8 @@ Have a look at Figure \ref{fig:tuwcvl}.
 \label{fig:tuwcvl}
 \end{figure}
 
+Remaining text.
+
 \end{frame}
 
 % -----------------------------------------------------------------------------
@@ -201,7 +204,8 @@ Have a look at Figure \ref{fig:tuwcvl}.
 \begin{columns}
 \column{0.5\textwidth} % beamer slides are 128mm by 96mm
 
-Some text\\
+Some text
+
 Some more text
 
 \column{0.4\textwidth}
